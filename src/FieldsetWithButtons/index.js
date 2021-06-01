@@ -1,10 +1,10 @@
 import "./style.css";
 
-const Fieldset = ({ title, body }) => (
-  <fieldset className="fieldset fieldset__buttons">
+const FieldsetWithButtons = ({ title, body }) => (
+  <fieldset className="fieldset fieldset--buttons">
     <h2 className="fieldset__header">{title}</h2>
     {body}
   </fieldset>
 );
 
-export default Fieldset;
+export default FieldsetWithButtons;
