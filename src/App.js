@@ -3,6 +3,7 @@ import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
 import Fieldset from "./Fieldset";
+import FieldsetWithButtons from "./FieldsetWithButtons";
 import Section from "./Section";
 import Container from "./Container";
 
@@ -23,9 +24,10 @@ function App() {
         <Fieldset body={<Form />} />
       </Section>
       <Section>
-        <Fieldset
+        <FieldsetWithButtons
           title="Lista zadań"
-          body={<Buttons tasks={tasks} hideCompletedTasks={hideCompletedTasks} />}
+          body={<Buttons tasks={tasks} hideCompletedTasks={hideCompletedTasks}
+        />}
         />
         <Fieldset
           body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} />}
