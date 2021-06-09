@@ -2,8 +2,6 @@ import Header from "./Header";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
-import Fieldset from "./Fieldset";
-import FieldsetWithButtons from "./FieldsetWithButtons";
 import Section from "./Section";
 import Container from "./Container";
 
