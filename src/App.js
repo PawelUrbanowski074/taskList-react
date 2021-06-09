@@ -18,16 +18,17 @@ const hideCompletedTasks = false;
 function App() {
   return (
     <Container>
-      <Header />
-      <Section>
-        <Fieldset title="Dodaj nowe zadanie" />
-        <Fieldset body={<Form />} />
+      <Header title="Lista zadań"/>
+      <Section
+        title="Dodaj nowe zadanie" 
+        body={<Form/>}
+      >  
       </Section>
       <Section>
         <FieldsetWithButtons
           title="Lista zadań"
           body={<Buttons tasks={tasks} hideCompletedTasks={hideCompletedTasks}
-        />}
+          />}
         />
         <Fieldset
           body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} />}

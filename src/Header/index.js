@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Header = () => (
+const Header = ({ title }) => (
   <header className="header">
-    <h1>Lista zadań</h1>
+    <h1>{title}</h1>
   </header>
 );
 
