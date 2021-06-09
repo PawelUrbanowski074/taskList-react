@@ -22,18 +22,16 @@ function App() {
       <Section
         title="Dodaj nowe zadanie" 
         body={<Form/>}
-      >  
-      </Section>
-      <Section>
-        <FieldsetWithButtons
-          title="Lista zadań"
-          body={<Buttons tasks={tasks} hideCompletedTasks={hideCompletedTasks}
-          />}
-        />
-        <Fieldset
-          body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} />}
-        />
-      </Section>
+      />  
+      <Section
+        title="Lista zadań" 
+        extraHeaderContent=
+        {<Buttons 
+          tasks={tasks} 
+          hideCompletedTasks={hideCompletedTasks}
+        />} 
+        body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} />} 
+      />
     </Container>
   );
 }
