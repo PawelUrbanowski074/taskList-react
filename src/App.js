@@ -11,7 +11,7 @@ const tasks = [
   { id: 2, content: "zjeść śniadanie", done: true },
 ];
 
-const hideCompletedTasks = false;
+const hideDone = false;
 
 function App() {
   return (
@@ -26,9 +26,9 @@ function App() {
         extraHeaderContent=
         {<Buttons 
           tasks={tasks} 
-          hideCompletedTasks={hideCompletedTasks}
+          hideDone={hideDone}
         />} 
-        body={<Tasks tasks={tasks} hideCompletedTasks={hideCompletedTasks} />} 
+        body={<Tasks tasks={tasks} hideDone={hideDone} />} 
       />
     </Container>
   );
