@@ -21,9 +21,7 @@
     width: 30px;
     height: 30px;
     border: none;
-    padding: 5px 10px;
     justify-self: center;
-    font-size: 18px;
     transition: 0.3s;
 }
 
