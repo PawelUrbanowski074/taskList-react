@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Header from "./Header";
 import Form from "./Form";
 import Buttons from "./Buttons";
@@ -59,12 +59,24 @@ function App() {
     ])
   };
 
+  const inputRef = useRef(null);
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
+        body={
+          <Form
+            addNewTask={addNewTask}
+            focusInput={focusInput}
+            inputRef={inputRef}
+          />
+        }
       />
       <Section
         title="Lista zadań"
