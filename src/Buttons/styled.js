@@ -4,29 +4,29 @@ export const Wrapper = styled.div`
     display: grid;
     grid-template-columns: auto auto;
 
-    @media (max-width: 767px) {
+    @media (max-width:${({theme}) => theme.breakPoint.mobileMax }px) {
         grid-template-columns: 1fr;
     }
 `;
 
 export const Button = styled.button`
-    background-color: white;
-    color: teal;
+    background-color: ${({theme}) => theme.color.white};
+    color: ${({theme}) => theme.color.teal};
     border-style: none;
     padding: 15px 15px;
     transition: 0.3s;
 
     &:hover:not([disabled]) {
-        color: hsl(180, 100%, 35%);
+        filter: brightness(110%);
         cursor: pointer;
     }
 
     &:active:not([disabled]) {
-        color: hsl(180, 100%, 40%);
+        filter: brightness(120%);
     }
 
     &:disabled {
-        color: #bbb;
+        color: ${({theme}) => theme.color.silver};
         cursor: not-allowed;
     }
 `;
