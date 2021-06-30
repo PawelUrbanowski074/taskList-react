@@ -20,8 +20,6 @@ function App() {
     toggleTaskDone,
     setAllDone,
     addNewTask,
-    inputRef,
-    focusInput
   } = useTasks();
 
   return (
@@ -32,8 +30,6 @@ function App() {
         body={
           <Form
             addNewTask={addNewTask}
-            focusInput={focusInput}
-            inputRef={inputRef}
           />
         }
       />
