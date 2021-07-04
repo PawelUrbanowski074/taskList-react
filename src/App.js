@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { useTasks } from "./useTasks";
+import { Wrapper } from "./styled.js";
 import Header from "./Header";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
 import Section from "./Section";
-import Container from "./Container";
-import { useTasks } from "./useTasks";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -15,7 +15,7 @@ function App() {
   };
 
   const {
-    tasks, 
+    tasks,
     removeTask,
     toggleTaskDone,
     setAllDone,
@@ -23,7 +23,7 @@ function App() {
   } = useTasks();
 
   return (
-    <Container>
+    <Wrapper>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
@@ -51,7 +51,7 @@ function App() {
             toggleTaskDone={toggleTaskDone}
           />}
       />
-    </Container>
+    </Wrapper>
   );
 }
 
