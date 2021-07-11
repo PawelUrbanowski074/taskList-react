@@ -19,13 +19,13 @@ const tasksSlice = createSlice({
         },
         toggleTaskDone: ({ tasks }, { payload }) => {
             const index = tasks.findIndex(({ id }) => id === payload);
-tasks[index].done = !tasks[index].done;
+            tasks[index].done = !tasks[index].done;
         },
-setAllDone: ({ tasks }) => {
-    tasks.forEach(task => {
-        task.done = true;
-    });
-}
+        setAllDone: ({ tasks }) => {
+            tasks.forEach(task => {
+                task.done = true;
+            });
+        }
     },
 });
 
