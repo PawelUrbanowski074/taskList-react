@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useTasks } from "../../useTasks";
 import { Wrapper } from "../../styled.js";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
@@ -8,48 +6,17 @@ import Buttons from "./Buttons";
 import TasksList from "./TasksList";
 
 function Tasks() {
-  const [hideDone, setHideDone] = useState(false);
-
-  const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone);
-  };
-
-  const {
-    tasks,
-    removeTask,
-    toggleTaskDone,
-    setAllDone,
-    addNewTask,
-  } = useTasks();
-
   return (
     <Wrapper>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={
-          <Form
-            addNewTask={addNewTask}
-          />
-        }
+        body={<Form />}
       />
       <Section
         title="Lista zadań"
-        extraHeaderContent={
-          <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-            setAllDone={setAllDone}
-          />
-        }
-        body={
-          <TasksList
-            tasks={tasks}
-            hideDone={hideDone}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-          />}
+        extraHeaderContent={<Buttons />}
+        body={<TasksList />}
       />
     </Wrapper>
   );
