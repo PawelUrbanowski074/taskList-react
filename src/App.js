@@ -1,32 +1,35 @@
-import { HashRouter, NavLink, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage";
 import TasksPage from "./features/tasks/TasksPage/index.js";
 import TaskPage from "./features/tasks/TaskPage";
+import { StyledNavLink, Wrapper, List, Item } from "./styled";
 
 const App = () => (
   <HashRouter>
     <nav>
-      <ul>
-        <li>
-          <NavLink activeClassName="active" to="/zadania">Zadania</NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="active" to="/author">O autorze</NavLink>
-        </li>
-      </ul>
+      <List>
+        <Item>
+          <StyledNavLink to="/zadania">Zadania</StyledNavLink>
+        </Item>
+        <Item>
+          <StyledNavLink to="/author">O autorze</StyledNavLink>
+        </Item>
+      </List>
       <Switch>
-        <Route path="/zadania/:id">
-          <TaskPage />
-        </Route>
-        <Route path="/zadania">
-          <TasksPage />
-        </Route>
-        <Route path="/author">
-          <AuthorPage />
-        </Route>
-        <Route path="/">
-          <Redirect to="/zadania" />
-        </Route>
+        <Wrapper>
+          <Route path="/zadania/:id">
+            <TaskPage />
+          </Route>
+          <Route path="/zadania">
+            <TasksPage />
+          </Route>
+          <Route path="/author">
+            <AuthorPage />
+          </Route>
+          <Route path="/">
+            <Redirect to="/zadania" />
+          </Route>
+        </Wrapper>
       </Switch>
     </nav>
   </HashRouter>

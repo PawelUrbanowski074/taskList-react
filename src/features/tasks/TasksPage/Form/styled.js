@@ -1,22 +1,14 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
     padding: 15px 0px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-        flex-direction: column;
-    }
-`;
-
-export const Input = styled.input`
-    padding: 10px;
-    flex-grow: 1;
-    margin-right: 15px;
-    border: 1px solid ${({ theme }) => theme.color.alto};
-
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-        margin: 10px 0;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
     }
 `;
 
