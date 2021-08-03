@@ -16,7 +16,6 @@ const App = () => (
         </Item>
       </List>
       <Switch>
-        <Wrapper>
           <Route path="/zadania/:id">
             <TaskPage />
           </Route>
@@ -29,7 +28,6 @@ const App = () => (
           <Route path="/">
             <Redirect to="/zadania" />
           </Route>
-        </Wrapper>
       </Switch>
     </nav>
   </HashRouter>
