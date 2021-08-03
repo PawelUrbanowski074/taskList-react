@@ -10,14 +10,13 @@ const AuthorPage = () => (
             title="Paweł Urbanowski - kilka słów o mnie..."
             body={<>
                 <Paragraph>
-                Absolwent <strong>informatyki</strong>, obecny uczestnik kursu Front-end developera na platformie <strong>Youcode</strong>. Szukam pomysłu na przyszłość, stąd próba sił w tworzeniu stron internetowych.
+                    Absolwent <strong>informatyki</strong>, obecny uczestnik kursu Front-end developera na platformie <strong>Youcode</strong>. Szukam pomysłu na przyszłość, stąd próba sił w tworzeniu stron internetowych.
                 </Paragraph>
                 <Paragraph>
-                Poza nauką, gitarzysta basowy oraz fan siatkówki. W czasie wolnym lubię gotować, oglądać seriale oraz jeździć na rolkach.
-                <br/>
+                    Poza nauką, gitarzysta basowy oraz fan siatkówki. W czasie wolnym lubię gotować, oglądać seriale oraz jeździć na rolkach.
                 </Paragraph>
                 <Paragraph>
-                Jeśli chcesz spojrzeć na inne moje projekty, zapraszam Cię <Link target="_blank" href="https://github.com/palel">tutaj</Link>. 
+                    Jeśli chcesz spojrzeć na inne moje projekty, zapraszam Cię <Link target="_blank" href="https://github.com/palel">tutaj</Link>.
                 </Paragraph>
             </>}
         />

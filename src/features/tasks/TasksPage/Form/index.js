@@ -7,7 +7,6 @@ import Input from "../Input";
 
 const Form = () => {
   const [newTaskContent, setNewTaskContent] = useState("");
-
   const dispatch = useDispatch();
 
   const inputRef = useRef(null);

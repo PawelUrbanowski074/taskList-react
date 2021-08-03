@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectExampleTaskLoading, fetchExampleTasks} from "../../tasksSlice";
+import { selectExampleTaskLoading, fetchExampleTasks } from "../../tasksSlice";
 import Button from "../Button";
 
 const ExampleTaskButton = () => {
@@ -7,7 +7,7 @@ const ExampleTaskButton = () => {
     const dispatch = useDispatch();
 
     return (
-        <Button 
+        <Button
             onClick={() => dispatch(fetchExampleTasks())}
             disabled={loading}
         >

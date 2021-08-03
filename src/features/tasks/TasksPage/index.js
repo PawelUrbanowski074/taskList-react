@@ -1,4 +1,4 @@
-import {useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Wrapper } from "../../../styled.js";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";

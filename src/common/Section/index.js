@@ -1,6 +1,5 @@
 import { SectionWrapper, Header, Title, Body } from "./styled";
 
-
 const Section = ({ title, extraHeaderContent, body }) => (
   <SectionWrapper>
     <Header>

@@ -16,18 +16,18 @@ const App = () => (
         </Item>
       </List>
       <Switch>
-          <Route path="/zadania/:id">
-            <TaskPage />
-          </Route>
-          <Route path="/zadania">
-            <TasksPage />
-          </Route>
-          <Route path="/author">
-            <AuthorPage />
-          </Route>
-          <Route path="/">
-            <Redirect to="/zadania" />
-          </Route>
+        <Route path="/zadania/:id">
+          <TaskPage />
+        </Route>
+        <Route path="/zadania">
+          <TasksPage />
+        </Route>
+        <Route path="/author">
+          <AuthorPage />
+        </Route>
+        <Route path="/">
+          <Redirect to="/zadania" />
+        </Route>
       </Switch>
     </nav>
   </HashRouter>
