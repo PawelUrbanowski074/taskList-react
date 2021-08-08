@@ -2,20 +2,20 @@ import { takeLatest, call, put, delay, takeEvery, select } from "redux-saga/effe
 import {
   fetchExampleTasks,
   selectTasks,
-  setTasks,
-  setTasksError
+  fetchExampleTasksSuccess,
+  fetchExampleTasksError
 } from "./tasksSlice";
 import { getExampleTasks } from "./getExampleTasks";
-import { saveTasksInLocalStorage } from "./tasksLocaleStorage";
+import { saveTasksInLocalStorage } from "./localeStorage";
 
 function* fetchExampleTasksHandler() {
   try {
     yield delay(1000);
     const exampleTasks = yield call(getExampleTasks);
-    yield put(setTasks(exampleTasks));
+    yield put(fetchExampleTasksSuccess(exampleTasks));
   } catch (error) {
-    yield put(setTasksError());
-    yield call(alert, "Coś poszło nie tak!");
+    yield put(fetchExampleTasksError());
+    yield call(alert, "Przykładowe zadania nie zostały pobrane prawidłowo... Proszę, odśwież stronę i spróbuj ponownie.");
   }
 }
 
