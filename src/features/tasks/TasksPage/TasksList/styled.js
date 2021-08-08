@@ -57,6 +57,7 @@ export const Button = styled.button`
 export const StyledLink = styled(Link)`
   color:  ${({ theme }) => theme.color.teal}; 
   text-decoration: none;
+  transition: 0.3s;
 
   &:hover {
       filter: brightness(110%);
