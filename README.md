@@ -1,6 +1,6 @@
 # Pawel Urbanowski - Task List in React.js
 
-## Preview: [task-list demos](https://palel.github.io/taskList-react/)
+## Preview: [task-list demos](https://pawelurbanowski074.github.io/taskList-react/)
 
 ### Table of content
 1. [General](#general)
